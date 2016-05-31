@@ -1,0 +1,19 @@
+.tempSpan {
+    color: #ffffff;
+}
+
+.containerDiv {
+    background-color: #666666;
+    margin:10px; 
+    display:table-cell; 
+    border-right: 1px solid #FF6600;
+    width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#titleDiv {
+    background-color: #e6e6e6;
+    margin:10px; 
+    color: #000000;
+}

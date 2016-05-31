@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+body {
+    background-color: #C1C1C1;
+}
+.tempSpan {
+    color: #C1C1C1;
+    font-weight:bold;
+}
+.containerDiv {
+    background-color: #666666;
+    margin:10px; 
+    display:block; 
+    border-right: 1px solid #FF6600;
+    width: 300px;
+    border-radius: 5px;
+}
+.containerDiv div{
+    color: #FFFFFF;
+    font-weight:bold;
+}
+#titleDiv {
+    margin:10px; 
+    color: #333333;
+}
+</style>
+</head>
+<body>
+    <div id="titleDiv">{{city.name}}  | {{city.country}}</div>
+    <div class="containerDiv"> <span class="tempSpan">Min temp for the period: {{filterMinTemp list}} &deg;</span></div>
+    <div class="containerDiv"> <span class="tempSpan">Max temp for the period: {{filterMaxTemp list}} &deg;</span></div>
+    {{#each list}}
+    <div class="titleDiv">{{getDay dt}} {{getDate dt}}</div>
+    <div class="containerDiv">
+        <div>{{getTime dt}} | <span class="tempSpan">{{main.temp}} &deg;</span></div>
+        <div>Lowest:<span class="tempSpan">{{main.temp_min}} &deg;</span></div>
+        <div>Highest:<span class="tempSpan">{{main.temp_max}} &deg;</span></div>
+    </div>
+    {{/each}}
+</body>
+</html>
